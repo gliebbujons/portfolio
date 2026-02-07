@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Futura, 'Century Gothic', 'Apple Gothic', sans-serif;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* Back link */
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+            z-index: 100;
+            font-weight: 600;
+        }
+
+        /* Discrete name at top right */
+        .page-name {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 12px;
+            color: #666;
+            z-index: 100;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Projects list */
+        .projects {
+            padding: 80px 40px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .project {
+            margin-bottom: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .project-main-image {
+            grid-column: 1 / -1;
+            width: 100%;
+            padding-top: 66.67%;
+            position: relative;
+            background: #f5f5f5;
+        }
+
+        .project-thumb {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            background: #f5f5f5;
+        }
+
+        .image-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-info h2 {
+            font-family: 'Bodoni MT', Bodoni, 'Didot', 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .project-specs {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .project-specs div {
+            margin-bottom: 8px;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            display: inline-block;
+            width: 120px;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                padding: 60px 20px 20px;
+            }
+
+            .project {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                margin-bottom: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-link">← Inici</a>
+    <div class="page-name">Glieb Bujons</div>
+
+    <div class="projects">
+
+        <!-- Project 1 -->
+        <a href="architecture/project-1.html" style="text-decoration: none; color: inherit;">
+            <article class="project">
+                <div class="project-images">
+                    <div class="project-main-image">
+                        <div class="image-placeholder" style="background: #667eea;"></div>
+                    </div>
+                    <div class="project-thumb">
+                        <div class="image-placeholder" style="background: #f093fb;"></div>
+                    </div>
+                    <div class="project-thumb">
+                        <div class="image-placeholder" style="background: #4facfe;"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h2>Casa Mediterrània</h2>
+                    <div class="project-meta">Barcelona, 2025</div>
+                    <p class="project-description">
+                        Habitatge unifamiliar que integra elements tradicionals mediterranis amb tècniques constructives
+                        contemporànies.
+                    </p>
+                    <div class="project-specs">
+                        <div><span class="spec-label">Superfície:</span> 280 m²</div>
+                        <div><span class="spec-label">Tipologia:</span> Habitatge unifamiliar</div>
+                        <div><span class="spec-label">Materials:</span> Formigó, fusta, vidre</div>
+                    </div>
+                </div>
+            </article>
+        </a>
+        <!-- Project 2 -->
+        <a href="architecture/project-2.html" style="text-decoration: none; color: inherit;">
+            <article class="project">
+                <div class="project-images">
+                    <div class="project-main-image">
+                        <div class="image-placeholder" style="background: #fa709a;"></div>
+                    </div>
+                    <div class="project-thumb">
+                        <div class="image-placeholder" style="background: #30cfd0;"></div>
+                    </div>
+                    <div class="project-thumb">
+                        <div class="image-placeholder" style="background: #a8edea;"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h2>Centre Cultural Urbà</h2>
+                    <div class="project-meta">València, 2024</div>
+                    <p class="project-description">
+                        Espai multifuncional destinat a activitats culturals i comunitàries amb integració urbana.
+                    </p>
+                    <div class="project-specs">
+                        <div><span class="spec-label">Superfície:</span> 1.200 m²</div>
+                        <div><span class="spec-label">Tipologia:</span> Equipament cultural</div>
+                        <div><span class="spec-label">Materials:</span> Acer, vidre, ceràmica</div>
+                    </div>
+                </div>
+            </article>
+        </a>
+        <!-- Project 3 -->
+        <a href="architecture/project-3.html" style="text-decoration: none; color: inherit;">
+            <article class="project">
+                <div class="project-images">
+                    <div class="project-main-image">
+                        <div class="image-placeholder" style="background: #ffecd2;"></div>
+                    </div>
+                    <div class="project-thumb">
+                        <div class="image-placeholder" style="background: #ff6e7f;"></div>
+                    </div>
+                    <div class="project-thumb">
+                        <div class="image-placeholder" style="background: #e0c3fc;"></div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h2>Rehabilitació Edifici Industrial</h2>
+                    <div class="project-meta">Girona, 2024</div>
+                    <p class="project-description">
+                        Transformació d'una antiga nau industrial en espai de coworking i tallers creatius.
+                    </p>
+                    <div class="project-specs">
+                        <div><span class="spec-label">Superfície:</span> 850 m²</div>
+                        <div><span class="spec-label">Tipologia:</span> Rehabilitació</div>
+                        <div><span class="spec-label">Materials:</span> Maó vist, acer, fusta</div>
+                    </div>
+                </div>
+            </article>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

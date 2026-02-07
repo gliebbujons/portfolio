@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatiu - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Futura, 'Century Gothic', 'Apple Gothic', sans-serif;
+            background: #fff;
+        }
+
+        /* Back link */
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            color: #000;
+            text-decoration: none;
+            z-index: 100;
+            font-weight: 600;
+        }
+
+        /* Discrete name at top right */
+        .page-name {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 12px;
+            color: #666;
+            z-index: 100;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Infinite gallery - no margins */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        .gallery-item {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            /* Square aspect ratio */
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .gallery-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Project title - only text, no background */
+        .project-title {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        /* Different colors for different backgrounds (you can adjust per project) */
+        .gallery-item:nth-child(1) .project-title,
+        .gallery-item:nth-child(2) .project-title,
+        .gallery-item:nth-child(5) .project-title,
+        .gallery-item:nth-child(10) .project-title {
+            color: #fff;
+            /* White text for dark backgrounds */
+        }
+
+        .gallery-item:nth-child(3) .project-title,
+        .gallery-item:nth-child(4) .project-title,
+        .gallery-item:nth-child(6) .project-title,
+        .gallery-item:nth-child(7) .project-title,
+        .gallery-item:nth-child(8) .project-title,
+        .gallery-item:nth-child(9) .project-title,
+        .gallery-item:nth-child(11) .project-title,
+        .gallery-item:nth-child(12) .project-title {
+            color: #000;
+            /* Black text for light backgrounds */
+        }
+
+        /* Show title on hover */
+        .gallery-item:hover .project-title {
+            opacity: 1;
+        }
+
+        /* Hover effect */
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0);
+            pointer-events: none;
+            transition: background 0.2s ease;
+        }
+
+        .gallery-item:hover::after {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .project-title {
+                font-size: 16px;
+                bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-link">← Inici</a>
+    <div class="page-name">Glieb Bujons</div>
+
+    <div class="gallery">
+
+        <!-- Cala Nans Plujós -->
+        <div class="gallery-item">
+            <a href="creative/cala-nans-plujos.html">
+                <div class="gallery-placeholder"
+                    style="background: url('images/creative/Cala-Nans-plujós/portada.JPG') center/cover;"></div>
+                <div class="project-title">Cala Nans Plujós</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-1.html">
+                <div class="gallery-placeholder" style="background: #667eea;"></div>
+                <div class="project-title">Projecte 1</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-2.html">
+                <div class="gallery-placeholder" style="background: #f093fb;"></div>
+                <div class="project-title">Projecte 2</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-3.html">
+                <div class="gallery-placeholder" style="background: #4facfe;"></div>
+                <div class="project-title">Projecte 3</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-4.html">
+                <div class="gallery-placeholder" style="background: #43e97b;"></div>
+                <div class="project-title">Projecte 4</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-5.html">
+                <div class="gallery-placeholder" style="background: #fa709a;"></div>
+                <div class="project-title">Projecte 5</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-6.html">
+                <div class="gallery-placeholder" style="background: #30cfd0;"></div>
+                <div class="project-title">Projecte 6</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-7.html">
+                <div class="gallery-placeholder" style="background: #a8edea;"></div>
+                <div class="project-title">Projecte 7</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-8.html">
+                <div class="gallery-placeholder" style="background: #ff9a9e;"></div>
+                <div class="project-title">Projecte 8</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-9.html">
+                <div class="gallery-placeholder" style="background: #ffecd2;"></div>
+                <div class="project-title">Projecte 9</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-10.html">
+                <div class="gallery-placeholder" style="background: #ff6e7f;"></div>
+                <div class="project-title">Projecte 10</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-11.html">
+                <div class="gallery-placeholder" style="background: #e0c3fc;"></div>
+                <div class="project-title">Projecte 11</div>
+            </a>
+        </div>
+
+        <div class="gallery-item">
+            <a href="creative/project-12.html">
+                <div class="gallery-placeholder" style="background: #f8b500;"></div>
+                <div class="project-title">Projecte 12</div>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
